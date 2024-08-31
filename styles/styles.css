@@ -6,7 +6,6 @@ html, body {
 
 html{
     background-color: #2E2F2C;
-
 }
 
 body {
@@ -43,7 +42,7 @@ nav > ul > li > a:hover {
     color: rgba(252, 88, 76, 0.9);
 }
 
-.homeContainer {
+.contentContainer {
     margin: 0 auto;
     width: 40%;
     padding: 0;
@@ -65,7 +64,7 @@ nav > ul > li > a:hover {
     font-weight: 500;
 }
 
-.introduction {
+.generalTextbox {
     text-align: center;
     color: #000000;
     background: rgb(103, 90, 82, 0.75); 
@@ -75,4 +74,40 @@ nav > ul > li > a:hover {
     font-size: x-large;
     font-weight: 600;
     padding: 3px;
+    width: 100%;
+    max-height: 600px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(22,23,21) #545952;
 }
+
+.projectList {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.projectListItem {
+    display: inline-block;
+    width: 65%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(22,23,21);
+    box-shadow: 3px 3px 3px rgb(22, 23, 21, 0.50);
+    border-radius: 10%;
+}
+.projectListItem > a {
+    color: #545952;
+}
+.projectListItem > a:hover {
+    color: rgba(252, 88, 76, 0.9);
+}
+
+.musicbox {
+    display: flex;
+    justify-content: space-between;
+    border: solid 3px black;
+    margin: auto;
+}
+
+
