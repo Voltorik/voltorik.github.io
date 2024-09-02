@@ -11,8 +11,10 @@ html{
 body {
     background: no-repeat center / cover url(../images/JapaneseApartmentSunset.svg);
     display: flex;
+    height: 100vh;
 }
 
+/* Nav bar */
 nav {
     border: outset rgba(252, 88, 76);
     border-radius: 5%;
@@ -46,10 +48,11 @@ nav > ul > li > a:hover {
     margin: 0 auto;
     width: 40%;
     padding: 0;
-    height: fit-content;
+    height: auto;
     justify-content: center;
 }
 
+/* Page title */
 .pageTitle {
     text-align: center;
     text-shadow: 1px 1px 1px black;
@@ -81,6 +84,7 @@ nav > ul > li > a:hover {
     scrollbar-color: rgba(22,23,21) #545952;
 }
 
+/* Project Page */
 .projectList {
     list-style-type: none;
     text-align: center;
@@ -103,11 +107,63 @@ nav > ul > li > a:hover {
     color: rgba(252, 88, 76, 0.9);
 }
 
-.musicbox {
+/* Music Page */
+.musicContainer {
+    margin-top: 10%;
     display: flex;
-    justify-content: space-between;
-    border: solid 3px black;
-    margin: auto;
+    width: 100%;
+    height: 100px;
+    position: relative;
 }
-
+.songSliderContainer {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: solid green;
+    padding-bottom: 40px;
+}
+.songSlider {
+    width: 150%;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    border: solid black;
+}
+.songItem {
+    height: fit-content;
+    white-space: nowrap; 
+    max-width: 200px;
+    margin: 5px;
+    padding: 5px;
+    border: solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.songItem:hover {
+    background-color: rgba(252, 88, 76);;
+}
+.songItem.selected {
+    background-color: rgba(252, 88, 76);;
+}
+#audioPlayer {
+    display: flex;
+    margin: 10px auto;
+    width: 50%;
+}
+.musicVisulaizer {
+    height: 40%;
+    width: 100%;
+    border: 1px solid #333;
+}
+/* disable text selection */
+.no-select {
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
 
