@@ -15,32 +15,34 @@ body {
 }
 
 /* Nav bar */
-nav {
+#navbar {
     border: outset rgba(252, 88, 76);
     border-radius: 5%;
     margin-top: 20px;
     margin-left: 20px;
     position: fixed;
     height: auto;
+    width: 150px;
 }
-nav > ul {
+#navbar > ul {
     list-style-type: none;
     padding: 10px;
     margin: 0;
 }
-nav > ul > li {
+#navbar > ul > li {
     text-align: left;
     font-size: 2rem;
     padding: 5px;
+    margin-bottom: 5px;
 }
-nav > ul > li > a {
+#navbar > ul > li > a {
     display: block;
     color: #545952;
     transition: background-color 0.3s;
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
 }
-nav > ul > li > a:hover {
+#navbar > ul > li > a:hover {
     color: rgba(252, 88, 76, 0.9);
 }
 
