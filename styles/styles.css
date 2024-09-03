@@ -110,7 +110,7 @@ body {
 }
 
 /* Goals Page */
-.contentContainer-goals {
+#contentContainer-goals {
     width: 60%;
 }
 #breakline {
