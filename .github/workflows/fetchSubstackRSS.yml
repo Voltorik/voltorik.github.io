@@ -28,10 +28,3 @@ jobs:
       # Fetch the Substack RSS feed and generate static content
       - name: Fetch and generate blog posts
         run: node genBlogPage.js
-
-      # Deploy the generated content to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
