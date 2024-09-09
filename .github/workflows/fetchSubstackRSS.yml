@@ -29,8 +29,6 @@ jobs:
       # Commit and push the changes to the repository
       - name: Commit blog page update
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
           git add pages/blog.html
           git commit -m "Auto-update blog with latest Substack posts" || echo "No changes to commit"
           git push
