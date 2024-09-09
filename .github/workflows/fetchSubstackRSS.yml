@@ -27,4 +27,4 @@ jobs:
 
       # Fetch the Substack RSS feed and generate static content
       - name: Fetch and generate blog posts
-        run: node genBlogPage.js
+        run: node scripts/genBlogPage.js
