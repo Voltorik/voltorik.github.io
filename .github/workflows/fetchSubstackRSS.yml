@@ -1,0 +1,37 @@
+name: Fetch and Build Substack RSS feed to build blog page
+
+on: 
+  schedule:
+  - cron: "0 */6 * * *" # runs every 6 hours
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # Install dependencies (if needed)
+      - name: Install dependencies
+        run: npm install
+
+      # Fetch the Substack RSS feed and generate static content
+      - name: Fetch and generate blog posts
+        run: node generate-content.js
+
+      # Deploy the generated content to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
