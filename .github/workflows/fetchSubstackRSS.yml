@@ -11,20 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v4
 
       # Set up Node.js environment
-      - name: Set up Node.js
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      # Install dependencies (if needed)
-      - name: Install dependencies
-        run: npm install
+          node-version: '20.x'
 
       # Fetch the Substack RSS feed and generate static content
       - name: Fetch and generate blog posts
         run: node scripts/genBlogPage.js
+
+      # Commit and push the changes to the repository
+      - name: Commit blog page update
+        run: |
+          git add pages/blog.html
+          git commit -m "Auto-update blog with latest Substack posts" || echo "No changes to commit"
+          git push
