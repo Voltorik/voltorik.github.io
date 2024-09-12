@@ -1,34 +1,34 @@
-name: Fetch and Build Substack RSS feed to build blog page
+# name: Fetch and Build Substack RSS feed to build blog page
 
-on: 
-  schedule:
-  - cron: "0 */6 * * *" # runs every 6 hours
-  push:
-    branches:
-      - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# on: 
+#   schedule:
+#   - cron: "0 */6 * * *" # runs every 6 hours
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
     
-    steps:
+#     steps:
     
-      # Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v4
+#       # Checkout the repository
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      # Set up Node.js environment
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
+#       # Set up Node.js environment
+#       - name: Set up Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20.x'
 
-      # Fetch the Substack RSS feed and generate static content
-      - name: Fetch and generate blog posts
-        run: node scripts/genBlogPage.js
+#       # Fetch the Substack RSS feed and generate static content
+#       - name: Fetch and generate blog posts
+#         run: node scripts/genBlogPage.js
 
-      # Commit and push the changes to the repository
-      - name: Commit blog page update
-        run: |
-          git add pages/blog.html
-          git commit -m "Auto-update blog with latest Substack posts" || echo "No changes to commit"
-          git push
+#       # Commit and push the changes to the repository
+#       - name: Commit blog page update
+#         run: |
+#           git add pages/blog.html
+#           git commit -m "Auto-update blog with latest Substack posts" || echo "No changes to commit"
+#           git push
