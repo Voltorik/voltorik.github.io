@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
     <link rel="manifest" href="../favicons/site.webmanifest">
     <script src="../scripts/loadNavbar.js"></script>
-    <script src="../scripts/pullSubstack.js"></script>
+    <script src="../scripts/getSubstack.js"></script>
 </head>
 <body>
     <nav id="navbar"></nav><script>loadNavbar('navbar', '../navbar.html', '../');</script>
@@ -21,9 +21,7 @@
             <h2>ᴠᴏʟᴛᴏʀɪᴋ</p>
         </div>
         <div class="generalTextbox">
-            <div id="substack-posts">
-                {{SUBSTACK_POSTS}}
-            </div>
+            <ul id="substack-posts">
         </div>
     </div>
 </body>
