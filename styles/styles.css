@@ -45,6 +45,27 @@ body {
 #navbar > ul > li > a:hover {
     color: rgba(252, 88, 76, 0.9);
 }
+.profileLinks {
+    margin-top: 10px;
+    display: flex;
+}
+.profileLinks a {
+    margin: auto;
+}
+#githubIcon {
+    border: 1px solid #545952;
+    border-radius: 100%;
+}
+#githubIcon:hover {
+    background-color: rgba(252, 88, 76);
+}
+#xIcon {
+    border: 1px solid #545952;
+    border-radius: 100%;
+}
+#xIcon:hover {
+    background-color: rgba(252, 88, 76);
+}
 
 /* Page title */
 .pageTitle {
