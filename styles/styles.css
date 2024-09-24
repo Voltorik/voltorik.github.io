@@ -131,6 +131,21 @@ body {
 }
 
 /* Blog Page */
+#post-title {
+    text-align: center;
+    color: #545952;
+    background-color: rgba(22,23,21);
+    border-radius: 3%;
+    padding: 4px;
+    font-family: monospace;
+}
+#post-title:hover {
+    color: rgba(252, 88, 76);
+}
+#blogLineBreak {
+    color: black;
+    height: 2px;
+}
 #substack-posts {
     list-style-type: none;
     text-align: center;
@@ -143,7 +158,7 @@ body {
 }
 .substack-post {
     display: inline-block;
-    width: 65%;
+    width: 80%;
     margin: 10px;
     padding: 10px;
     color: #545952;
