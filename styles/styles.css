@@ -48,20 +48,23 @@ body {
 .profileLinks {
     margin-top: 10px;
     display: flex;
+    border-radius: 5%;
 }
 .profileLinks a {
     margin: auto;
 }
 #githubIcon {
-    border: 1px solid #545952;
-    border-radius: 100%;
+    background-color: #545952;
+    border-radius: 50%;
+    padding: 2px;
 }
 #githubIcon:hover {
     background-color: rgba(252, 88, 76);
 }
 #xIcon {
-    border: 1px solid #545952;
-    border-radius: 100%;
+    background-color: #545952;
+    border-radius: 5%;
+    padding: 2px;
 }
 #xIcon:hover {
     background-color: rgba(252, 88, 76);
@@ -133,8 +136,7 @@ body {
 /* Blog Page */
 #post-title {
     text-align: center;
-    color: #545952;
-    background-color: rgba(22,23,21);
+    color: rgba(22,23,21);
     border-radius: 3%;
     padding: 4px;
     font-family: monospace;
