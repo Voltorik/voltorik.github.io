@@ -1,4 +1,4 @@
-const url = 'https://corsproxy.io/?' + encodeURIComponent('https://voltorik.substack.com/feed'); 
+const url = 'https://volt-blogsite-backend.onrender.com/api/substack'
   fetch(url)
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
