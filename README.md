@@ -1,2 +1,1 @@
-Why are you here?
-What do you hope to find? 
+WIP personal site. Too many ideas, not enough dedication to any one of them. 
